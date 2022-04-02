@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.foodnews">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/gallery"
+        android:label="My Collection"
+        android:roundIcon="@mipmap/gallery"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="m">
+        <activity
+            android:name="com.example.MyCollection.Track.placeEditText"
+            android:exported="true" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.example.MyCollection.Track.MapsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.example.MyCollection.Acitvity.FoodList"
+            android:exported="false" />
+        <activity
+            android:name="com.example.MyCollection.Acitvity.CreateCategoryActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".Acitvity.BottomNavbActivity" -->
+        <!-- android:exported="false" -->
+        <!-- android:label="@string/title_activity_bottom_navb" /> -->
+        <!-- <activity -->
+        <!-- android:name=".Acitvity.HomeActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name="com.example.MyCollection.Acitvity.ViewImageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.MyCollection.Acitvity.CreateActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.MyCollection.Acitvity.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.MyCollection.Acitvity.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.MyCollection.Acitvity.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
